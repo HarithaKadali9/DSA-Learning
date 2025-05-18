@@ -226,6 +226,17 @@ public class DoubleLL {
     }
     private static Node reverseDoubleLL(Node head){
         if(head==null || head.next==null) return head;
+        Node temp=head;
+        Node prev=null;
+        while(temp!=null){
+            prev=temp.prev;
+            temp.prev=temp.next;
+            temp.next=prev;
+            temp=temp.prev;
+        }
+        return prev.prev;
+        /**
+        if(head==null || head.next==null) return head;
         Stack<Integer> stack=new Stack<>();
         Node temp=head;
         while(temp!=null){
@@ -238,6 +249,7 @@ public class DoubleLL {
             temp=temp.next;
         }
         return head;
+         */
     }
     public static void main(String args[]){
         int arr[]={12, 5, 8, 7};
