@@ -1,7 +1,7 @@
 
 
 
-class Solution {
+class DeleteAllOccurrences {
     public static ListNode deleteAllOccurrences(ListNode head, int target){
         ListNode temp=head;
         ListNode nextNode=null, prevNode=null;
