@@ -1,4 +1,4 @@
-class SortList {
+class SortCloursUsingLL {
     public static ListNode sortList(ListNode head) {
         if(head==null || head.next==null) return head;
         //Dutch National Flag algorithm
