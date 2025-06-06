@@ -21,3 +21,30 @@ class SubsequencePrint{
         subsequence(0, new ArrayList<>(), arr, n);
     }
 }
+
+/**
+ * 
+ * class Solution {
+    private static List<List<Integer>> generateSubsets(int ind, int nums[], List<List<Integer>> res, List<Integer> list){
+        
+        if(ind==nums.length) {
+            res.add(new ArrayList<>(list));
+            return res;
+        }
+
+        list.add(nums[ind]);
+        generateSubsets(ind+1, nums, res, list);
+
+        list.remove(list.size()-1);
+        generateSubsets(ind+1, nums, res, list);
+
+        return res;
+    }
+    public List<List<Integer>> subsets(int[] nums) {
+        List<List<Integer>> res=new ArrayList<>();
+        res=generateSubsets(0, nums, res, new ArrayList<>());
+        return res;
+    }
+}
+
+ */
